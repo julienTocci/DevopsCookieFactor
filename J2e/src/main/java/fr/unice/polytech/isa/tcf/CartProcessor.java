@@ -3,15 +3,20 @@ package fr.unice.polytech.isa.tcf;
 
 import fr.unice.polytech.isa.tcf.entities.Customer;
 import fr.unice.polytech.isa.tcf.entities.Item;
+import fr.unice.polytech.isa.tcf.exceptions.EmptyCartException;
 import fr.unice.polytech.isa.tcf.exceptions.PaymentException;
-import fr.unice.polytech.isa.tcf.utils.BankAPI;
 
 import javax.ejb.Local;
 import java.util.Set;
 
 @Local
-public interface Payment {
+public interface CartProcessor {
 
-	String payOrder(Customer customer, Set<Item> items) throws PaymentException ;
+    Set<Item> contents(Customer c);
+
+    double price(Customer c);
+
+    String validate(Customer c) throws PaymentException, EmptyCartException;
+
 
 }

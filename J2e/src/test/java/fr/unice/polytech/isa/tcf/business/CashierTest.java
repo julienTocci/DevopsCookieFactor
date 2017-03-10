@@ -2,9 +2,7 @@ package fr.unice.polytech.isa.tcf.business;
 
 
 import arquillian.AbstractTCFTest;
-import fr.unice.polytech.isa.tcf.CustomerFinder;
-import fr.unice.polytech.isa.tcf.CustomerRegistration;
-import fr.unice.polytech.isa.tcf.Payment;
+import fr.unice.polytech.isa.tcf.ControlledPayment;
 import fr.unice.polytech.isa.tcf.entities.Cookies;
 import fr.unice.polytech.isa.tcf.entities.Customer;
 import fr.unice.polytech.isa.tcf.entities.Item;
@@ -18,9 +16,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
-import javax.annotation.Resource;
 import javax.ejb.EJB;
+import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.UserTransaction;
@@ -34,8 +31,9 @@ import static org.mockito.Mockito.*;
 @Transactional(TransactionMode.COMMIT)
 public class CashierTest extends AbstractTCFTest {
 
-	@EJB private Payment cashier;
+	@EJB private ControlledPayment cashier;
 	@PersistenceContext private EntityManager entityManager;
+	@Inject	private UserTransaction utx;
 
 	// Test context
 	private Set<Item> items;
@@ -50,10 +48,12 @@ public class CashierTest extends AbstractTCFTest {
 
 	@After
 	public void cleanUpContext() throws Exception {
-		john = entityManager.merge(john);
-		entityManager.remove(john);
-		pat = entityManager.merge(pat);
-		entityManager.remove(pat);
+		utx.begin();
+			john = entityManager.merge(john);
+			entityManager.remove(john);
+			pat = entityManager.merge(pat);
+			entityManager.remove(pat);
+		utx.commit();
 	}
 
 	@Test

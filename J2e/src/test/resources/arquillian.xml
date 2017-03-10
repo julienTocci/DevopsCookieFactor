@@ -7,7 +7,6 @@
         <configuration>
             <property name="httpPort">-1</property>
             <property name="stopPort">-1</property>
-            <property name="tomcatVersion"></property>
             <property name="openejbVersion">${tomee.version}</property>
             <property name="dir">target/apache-tomee-remote</property>
             <property name="appWorkingDir">target/arquillian-test-working-dir</property>
@@ -17,8 +16,16 @@
                 my-datasource.UserName = sa
                 my-datasource.Password =
                 my-datasource.JtaManaged = true
-                my-datasource.LogSql = true
+                my-datasource.LogSql = false
             </property>
         </configuration>
     </container>
+
+    <extension qualifier="cucumber">
+        <property name="report">true</property>
+        <property name="generateDocs">true</property>
+        <property name="report-directory">target/cucumber-report</property>
+        <property name="persistenceEventsActivated">true</property>
+    </extension>
+
 </arquillian>
