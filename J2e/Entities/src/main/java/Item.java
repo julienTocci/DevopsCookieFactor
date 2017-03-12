@@ -4,6 +4,7 @@ import javax.persistence.Enumerated;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
+
 @Embeddable
 public class Item implements Serializable {
 

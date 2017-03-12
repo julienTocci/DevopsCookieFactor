@@ -1,13 +1,3 @@
-import fr.unice.polytech.isa.tcf.CartModifier;
-import fr.unice.polytech.isa.tcf.CartProcessor;
-import fr.unice.polytech.isa.tcf.CatalogueExploration;
-import fr.unice.polytech.isa.tcf.CustomerFinder;
-import fr.unice.polytech.isa.tcf.entities.Cookies;
-import fr.unice.polytech.isa.tcf.entities.Customer;
-import fr.unice.polytech.isa.tcf.entities.Item;
-import exceptions.EmptyCartException;
-import exceptions.PaymentException;
-
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.faces.application.FacesMessage;

@@ -1,11 +1,3 @@
-package fr.unice.polytech.isa.tcf.components;
-
-import fr.unice.polytech.isa.tcf.OrderProcessing;
-import fr.unice.polytech.isa.tcf.Tracker;
-import fr.unice.polytech.isa.tcf.entities.Order;
-import fr.unice.polytech.isa.tcf.entities.OrderStatus;
-import exceptions.UnknownOrderId;
-import fr.unice.polytech.isa.tcf.utils.CookieScheduler;
 
 import javax.annotation.Resource;
 import javax.ejb.EJB;
@@ -24,7 +16,8 @@ public class KitchenBean implements OrderProcessing, Tracker {
 	@PersistenceContext private EntityManager entityManager;
     @Resource private ConnectionFactory connectionFactory;
     @Resource(name = "KitchenPrinter") private Queue printerQueue;
-    @EJB CookieScheduler scheduler;
+    @EJB
+    CookieScheduler scheduler;
 
 	@Override
 	public void process(Order o) {

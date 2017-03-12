@@ -1,11 +1,3 @@
-import fr.unice.polytech.isa.tcf.CatalogueExploration;
-import fr.unice.polytech.isa.tcf.CustomerRegistration;
-import fr.unice.polytech.isa.tcf.Tracker;
-import fr.unice.polytech.isa.tcf.entities.Cookies;
-import fr.unice.polytech.isa.tcf.entities.OrderStatus;
-import exceptions.AlreadyExistingCustomerException;
-import exceptions.UnknownOrderId;
-
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.jws.WebService;

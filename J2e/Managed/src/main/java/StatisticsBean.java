@@ -1,5 +1,3 @@
-import fr.unice.polytech.isa.tcf.utils.Database;
-
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 

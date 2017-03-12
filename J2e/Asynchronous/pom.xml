@@ -11,5 +11,13 @@
 
     <artifactId>Asynchronous</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>fr.unice.polytech.isa</groupId>
+            <artifactId>Entities</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
 
 </project>

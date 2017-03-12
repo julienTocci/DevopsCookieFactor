@@ -11,5 +11,8 @@
 
     <artifactId>Entities</artifactId>
 
+    <dependencies>
+    </dependencies>
+
 
 </project>

@@ -1,6 +1,4 @@
-import fr.unice.polytech.isa.tcf.entities.Order;
 import org.apache.openejb.util.LogCategory;
-
 import javax.annotation.Resource;
 import javax.ejb.ActivationConfigProperty;
 import javax.ejb.MessageDriven;

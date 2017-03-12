@@ -2,6 +2,11 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
+    <parent>
+        <artifactId>CookieFactory</artifactId>
+        <groupId>CookieFactory</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
     <groupId>fr.unice.polytech.isa</groupId>
     <artifactId>tcf-backend</artifactId>
@@ -14,9 +19,8 @@
         <module>Interceptors</module>
         <module>Managed</module>
         <module>Utils</module>
-        <module>Utils</module>
         <module>Webservice</module>
-        <module>General</module>
+        <module>Tools</module>
     </modules>
     <name>ISA :: The Cookie Factory :: J2E Backend</name>
 
@@ -124,6 +128,16 @@
             <artifactId>arquillian-tomee-embedded</artifactId>
             <version>${versions.tomee}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>fr.unice.polytech.isa</groupId>
+            <artifactId>Components</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>fr.unice.polytech.isa</groupId>
+            <artifactId>Asynchronous</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
 
     </dependencies>

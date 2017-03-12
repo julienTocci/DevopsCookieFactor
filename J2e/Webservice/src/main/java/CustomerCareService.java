@@ -1,8 +1,3 @@
-import fr.unice.polytech.isa.tcf.entities.Cookies;
-import fr.unice.polytech.isa.tcf.entities.OrderStatus;
-import exceptions.AlreadyExistingCustomerException;
-import exceptions.UnknownOrderId;
-
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebResult;

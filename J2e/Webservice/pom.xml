@@ -10,6 +10,25 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>Webservice</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>fr.unice.polytech.isa</groupId>
+            <artifactId>Tools</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>fr.unice.polytech.isa</groupId>
+            <artifactId>Interceptors</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>fr.unice.polytech.isa</groupId>
+            <artifactId>Components</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+
+    </dependencies>
 
 
 </project>

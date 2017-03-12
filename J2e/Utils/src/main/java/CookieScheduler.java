@@ -1,8 +1,3 @@
-package fr.unice.polytech.isa.tcf.utils;
-
-import fr.unice.polytech.isa.tcf.entities.Order;
-import fr.unice.polytech.isa.tcf.entities.OrderStatus;
-
 import javax.ejb.*;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

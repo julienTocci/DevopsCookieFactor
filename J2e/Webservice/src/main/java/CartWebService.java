@@ -1,9 +1,3 @@
-import fr.unice.polytech.isa.tcf.entities.Item;
-import exceptions.EmptyCartException;
-import exceptions.PaymentException;
-import exceptions.UnknownCustomerException;
-import fr.unice.polytech.isa.tcf.interceptors.ItemVerifier;
-
 import javax.interceptor.Interceptors;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;

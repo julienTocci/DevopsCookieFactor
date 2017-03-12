@@ -1,16 +1,3 @@
-package fr.unice.polytech.isa.tcf.components;
-
-import fr.unice.polytech.isa.tcf.ControlledPayment;
-import fr.unice.polytech.isa.tcf.OrderProcessing;
-import fr.unice.polytech.isa.tcf.Payment;
-import fr.unice.polytech.isa.tcf.entities.Customer;
-import fr.unice.polytech.isa.tcf.entities.Item;
-import fr.unice.polytech.isa.tcf.entities.Order;
-import exceptions.ExternalPartnerException;
-import exceptions.PaymentException;
-import exceptions.UncheckedException;
-import fr.unice.polytech.isa.tcf.utils.BankAPI;
-
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;

@@ -4,7 +4,6 @@ import stubs.cart.CartWebService;
 import stubs.cart.CartWebServiceImplService;
 import stubs.customerCare.CustomerCareService;
 import stubs.customerCare.CustomerCareServiceImplService;
-
 import javax.xml.ws.BindingProvider;
 import java.net.URL;
 
@@ -19,7 +18,7 @@ public class TCFPublicAPI {
 	}
 
 	private void initCart(String host, String port) {
-		URL wsdlLocation = TCFPublicAPI.class.getResource("/CartWS.wsdl");
+		URL wsdlLocation = TCFPublicAPI.class.getResource("CartWS.wsdl");
 		CartWebServiceImplService factory = new CartWebServiceImplService(wsdlLocation);
 		this.carts = factory.getCartWebServiceImplPort();
 		String address = "http://" + host + ":" + port + "/tcf-backend/webservices/CartWS";
@@ -27,7 +26,7 @@ public class TCFPublicAPI {
 	}
 
 	private void initCCS(String host, String port) {
-		URL wsdlLocation = TCFPublicAPI.class.getResource("/CustomerCareWS.wsdl");
+		URL wsdlLocation = TCFPublicAPI.class.getResource("CustomerCareWS.wsdl");
 		CustomerCareServiceImplService factory = new CustomerCareServiceImplService(wsdlLocation);
 		this.ccs = factory.getCustomerCareServiceImplPort();
 		String address = "http://" + host + ":" + port + "/tcf-backend/webservices/CustomerCareWS";

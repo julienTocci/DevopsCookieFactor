@@ -1,10 +1,3 @@
-package fr.unice.polytech.isa.tcf.components;
-
-import fr.unice.polytech.isa.tcf.CustomerFinder;
-import fr.unice.polytech.isa.tcf.CustomerRegistration;
-import fr.unice.polytech.isa.tcf.entities.Customer;
-import exceptions.AlreadyExistingCustomerException;
-
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;

@@ -1,6 +1,7 @@
-import cli.commands.*;
-import cli.framework.Shell;
 import api.TCFPublicAPI;
+import commands.*;
+import framework.Shell;
+
 
 /**
  * An Interactive shell that interacts with a Cookie on Demand instance
@@ -25,7 +26,7 @@ public class Main extends Shell<TCFPublicAPI> {
 				ShowCart.class, OrderCookie.class, RemoveCookie.class, ProcessCart.class,
 				// Order tracking
 				TrackOrder.class,
-				// Play capability
+				// commands.Play capability
 				Play.class
 		);
 	}

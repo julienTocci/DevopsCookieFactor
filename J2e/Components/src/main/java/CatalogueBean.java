@@ -1,8 +1,3 @@
-package fr.unice.polytech.isa.tcf.components;
-
-import fr.unice.polytech.isa.tcf.CatalogueExploration;
-import fr.unice.polytech.isa.tcf.entities.Cookies;
-
 import javax.ejb.Stateless;
 import java.util.Arrays;
 import java.util.HashSet;

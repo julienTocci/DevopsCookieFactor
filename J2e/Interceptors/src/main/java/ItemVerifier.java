@@ -1,6 +1,3 @@
-import fr.unice.polytech.isa.tcf.entities.Item;
-import exceptions.UncheckedException;
-
 import javax.interceptor.AroundInvoke;
 import javax.interceptor.InvocationContext;
 

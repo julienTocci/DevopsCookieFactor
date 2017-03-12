@@ -38,7 +38,7 @@ public class CartWSDemo {
 
 	private static CartWebService initialize(String host, String port) {
 		System.out.println("#### Loading the WSDL contract");
-		URL wsdlLocation = CartWSDemo.class.getResource("/CartWS.wsdl");
+		URL wsdlLocation = CartWSDemo.class.getResource("CartWS.wsdl");
 		System.out.println("#### Instantiating the WS Proxy");
 		CartWebServiceImplService factory = new CartWebServiceImplService(wsdlLocation);
 		CartWebService ws = factory.getCartWebServiceImplPort();

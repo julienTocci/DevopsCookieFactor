@@ -1,5 +1,3 @@
-package fr.unice.polytech.isa.tcf.utils;
-
 import javax.ejb.Singleton;
 
 @Singleton

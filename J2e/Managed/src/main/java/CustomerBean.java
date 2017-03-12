@@ -1,7 +1,3 @@
-import fr.unice.polytech.isa.tcf.CustomerFinder;
-import fr.unice.polytech.isa.tcf.CustomerRegistration;
-import exceptions.AlreadyExistingCustomerException;
-
 import javax.ejb.EJB;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
