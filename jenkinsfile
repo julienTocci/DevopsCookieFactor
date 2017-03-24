@@ -1,10 +1,19 @@
 node {
-    def server = Artifactory.newServer url: SERVER_URL, credentialsId: CREDENTIALS
-    def rtMaven = Artifactory.newMavenBuild()
+    //def server = Artifactory.newServer url: SERVER_URL, credentialsId: CREDENTIALS
+    //def rtMaven = Artifactory.newMavenBuild()
 
-    stage 'Build'
-        git url: 'https://github.com/julienTocci/DevopsCookieFactor.git'
-
+    stage('Build'){
+        //git url: 'https://github.com/julienTocci/DevopsCookieFactor.git/'
+        withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: '868e96c3-6328-4050-b437-19d4a875fa1f',
+                            usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']]) {
+                //available as an env variable, but will be masked if you try to print it out any which way
+                sh 'echo $PASSWORD'
+                echo "${env.USERNAME}"
+            }
+        
+    }
+    
+/*
     stage 'Artifactory configuration'
         rtMaven.tool = MAVEN_TOOL // Tool name from Jenkins configuration
         rtMaven.deployer releaseRepo:'libs-release-local', snapshotRepo:'libs-snapshot-local', server: server
@@ -15,5 +24,5 @@ node {
         rtMaven.run pom: 'maven-example/pom.xml', goals: 'clean install', buildInfo: buildInfo
 
     stage 'Publish build info'
-        server.publishBuildInfo buildInfo
+        server.publishBuildInfo buildInfo*/
 }
