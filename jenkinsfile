@@ -3,13 +3,25 @@ node {
     //def rtMaven = Artifactory.newMavenBuild()
 
     stage('Build'){
+        git url: "https://github.com/julienTocci/DevopsCookieFactor.git"
+
         //git url: 'https://github.com/julienTocci/DevopsCookieFactor.git/'
-        withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: '868e96c3-6328-4050-b437-19d4a875fa1f',
+        /*withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: '868e96c3-6328-4050-b437-19d4a875fa1f',
                             usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']]) {
                 //available as an env variable, but will be masked if you try to print it out any which way
-                sh 'echo $PASSWORD'
-                echo "${env.USERNAME}"
+                shgit url: "https://github.com/${USERNAME}/DevopsCookieFactor.git"
+                
             }
+        */
+        withMaven(
+        maven: 'M3', // Maven installation declared in the Jenkins "Global Tool Configuration"
+        mavenSettingsConfig: 'my-maven-settings', // Maven settings.xml file defined with the Jenkins Config File Provider Plugin
+        mavenLocalRepo: '.repository') {
+
+          // Run the maven build
+          sh "mvn clean install"
+
+        }
         
     }
     

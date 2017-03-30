@@ -1,0 +1,17 @@
+sudo apt-get install git
+sudo apt-get install docker
+install intellij
+sudo apt-get install default-jdk
+sudo apt-get install \
+    linux-image-extra-$(uname -r) \
+    linux-image-extra-virtual
+
+install docker
+
+sudo docker create --tty --interactive -p 8080:8080 -p 50000:50000 --name="jenkins" -v  /home/MonHome:/var/jenkins_home  jenkins
+
+sudo docker start --attach jenkins
+
+
+trigger job like git would do
+http://localhost:8080/job/cookiesFactory/build?delay=0sec
