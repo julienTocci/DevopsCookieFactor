@@ -17,7 +17,7 @@ The provided service defines a _Payment_ service, one can use it to process cred
 
 The code is kept as simple as possible, and consists in only four files:
 
-  * `BusinessObjects.cs`: The different data structure to be used to support the payment service (_i.e._, `PaymentRequest`, `Payment` and `PaymentStatus`);
+  * `BusinessObjects.cs`: The different data structure to be used to support the payment service (_i.e._, `PaymentRequest`, `fr.unice.polytech.isa.tcf.Payment` and `PaymentStatus`);
   * `IPaymentService.cs`: the interface that models the resources exposed by the service:
     * a `mailbox` to receive `PaymentRequest`s;
     * a list of all `payments` performed on the system;

@@ -33,7 +33,7 @@ From a source code point of view:
 CoD > ?
   - bye: Exit Cookie on Demand
   - recipes: List all available recipes
-  - order: Order some cookies for a given customer (order CUSTOMER QUANTITY RECIPE)
+  - order: fr.unice.polytech.isa.tcf.entities.Order some cookies for a given customer (order CUSTOMER QUANTITY RECIPE)
   - play: commands.Play commands stored in a given file (play FILENAME)
   - process: Process a given cart into an order (process CUSTOMER_NAME)
   - register: Register a customer in the CoD backend (register CUSTOMER_NAME CREDIT_CARD_NUMBER)
