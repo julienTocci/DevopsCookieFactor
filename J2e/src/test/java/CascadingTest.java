@@ -17,7 +17,7 @@ public class CascadingTest extends AbstractTCFTest {
 
 	/****************************
 	 * Cascading-related cases **
-	 ****************************/
+	 ***************************/
 
 	@Test(expected = RollbackException.class)
 	public void cannotStoreOrderWithTransientCustomer() throws Exception {
