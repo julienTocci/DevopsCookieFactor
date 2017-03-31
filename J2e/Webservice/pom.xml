@@ -23,7 +23,7 @@
         </dependency>
         <dependency>
             <groupId>fr.unice.polytech.isa</groupId>
-            <artifactId>Beans</artifactId>
+            <artifactId>Bean</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
