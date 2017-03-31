@@ -12,7 +12,10 @@
     <artifactId>DotNet</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>./PartnerData</module>
+        <module>PartnerData</module>
+        <module>PartnerService</module>
+        <module>Server</module>
+
     </modules>
 
 
