@@ -14,5 +14,17 @@
         <module>J2e</module>
     </modules>
     <packaging>pom</packaging>
+<distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>67087bb28314-releases</name>
+        <url>http://localhost:8081/artifactory/cookieFactory</url>
+    </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>67087bb28314-snapshots</name>
+        <url>http://localhost:8081/artifactory/cookieFactory</url>
+    </snapshotRepository>
+</distributionManagement>
 
 </project>
