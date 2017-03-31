@@ -14,16 +14,23 @@
         <module>J2e</module>
     </modules>
     <packaging>pom</packaging>
-<distributionManagement>
+  <repositories>
+      <repository>
+          <id>artifactory</id>
+          <name>artifact generation</name>
+          <url>http://10.212.160.190:8081/artifactory/cookieFactory</url>
+      </repository>
+  </repositories>
+	<distributionManagement>
     <repository>
         <id>central</id>
         <name>67087bb28314-releases</name>
-        <url>http://localhost:8081/artifactory/cookieFactory</url>
+        <url>http://10.212.160.190:8081/artifactory/cookieFactory</url>
     </repository>
     <snapshotRepository>
         <id>snapshots</id>
         <name>67087bb28314-snapshots</name>
-        <url>http://localhost:8081/artifactory/cookieFactory</url>
+        <url>http://10.212.160.190:8081/artifactory/cookieFactory</url>
     </snapshotRepository>
 </distributionManagement>
 
